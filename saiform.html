@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+	<html lang="em">
+		<head>
+			<title>BPCL</title>
+			  <meta charset="utf-8"></meta>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+			<style>
+				.container
+				{
+					height:750px;
+					width:350px;
+				}
+				.form-control
+				{
+					width:280px;
+					margin-left:20px;
+				}
+				button
+				{
+					margin-left:84px;
+					width:50%;
+				}
+				p
+				{
+					margin-left:20px;
+				}
+				.custom-file-input
+				{
+					margin-left:20px;
+				}
+				h3
+				{
+					font-size:30px;
+					font-family: cursive;
+					font-weight: 1000;
+					color: chocolate;
+				}
+				h4 {
+					font-family: monospace;
+				font-weight: 1000;
+				color: lawngreen;
+				}
+				img
+				{
+					width:230px;
+					margin-left:50px;
+
+				}
+				#loading
+				{
+					position:fixed;
+					width:100%;
+					height:100vh;
+					background: #fff url('pre.gif') no-repeat center ;
+					z-index: 99999;
+				}
+			</style>
+        </head>
+	<body >
+<!--		{{username}}-->
+		<div class="container"><br>
+			<img src="{{url_for('static', filename='bpcl.jpg')}}">
+		<marquee direction="left" onmousedown="stop();" onmouseup="start();" > <h3> WELCOME TO SAI HI TECH FUELS</h3></marquee>
+
+			<h2 class="text-success">Fill Detail Here</h2>
+			<form class="form-horizontal" action="/save" method="POST" >
+				<div class="row">
+					<div class="col-sm-12 one">
+						<p>Name<strong style="color:red">*</strong></p>
+						<input type="text" class="form-control"  id="name"  name="name" placeholder="Name" onkeypress="return keys(event)" >
+						<span id="username_detail"></span><br>
+						<p>Mobile NO<strong style="color:red">*</strong></p>
+						<input type="text" class="form-control"  id="mobile"  name="mobile" placeholder="Mobile Number" onkeypress="return digits(event)" >
+						<span id="mobile_detail"></span>
+						<br>
+						<p>Vehicle Number<strong style="color:red">*</strong></p>
+						<input type="text" class="form-control"  id="vehicle"  name="vehicle" onkeypress="return digit(event)"   placeholder="Vehicle number" >
+						<span id="vehicle_detail"></span>
+						<p>Transection Slip Photo<strong style="color:red">*</strong></p>
+						<input type="file"  id="image"  name="image" >
+
+						<br><br>
+						<button type="submit" name="submit" id="submit" class="btn btn-danger">Submit</button>
+					</div>
+				</div>
+			</form>
+			<br>
+
+		</div>
+
+
+	</body>
+</html>

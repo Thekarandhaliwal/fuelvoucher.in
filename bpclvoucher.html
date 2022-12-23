@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+	<html lang="em">
+		<head>
+			<title>BPCL</title>
+			  <meta charset="utf-8"></meta>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			<style>
+                .first_div
+                {
+                    background-color: #0076c0!important;
+                    height:65px;
+                }
+                .bpcl-logo
+                {
+                    height:58px;
+                    margin-left:100px;
+                    margin-top:3px;
+                }
+                .background_image {
+
+						background-image: url({{url_for('static', filename='petrol1.jpg')}});
+						background-color: #cccccc;
+                        height:900px;
+                        width:100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        position: relative;
+					}
+
+                    .form-control
+				{
+
+					margin-left:0px;
+					box-sizing: content-box;
+
+				}
+                button
+				{
+<!--					margin-left:50px;-->
+					width:50%;
+                    background-color:#0076c0 !important;
+                    border: none !important;
+                    font-size: 20px !important;
+                     margin: 0;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+				}
+<!--                            input[type=submit] {-->
+<!--  background-color: #04AA6D;-->
+<!--  color: white;-->
+<!--  padding: 12px 20px;-->
+<!--  border: none;-->
+<!--  border-radius: 4px;-->
+<!--  cursor: pointer;-->
+<!--  float: right;-->
+<!--}-->
+                    .cmt-bgcolor-grey, .cmt-bgcolor-grey>.cmt-bg-layer, .cmt-bgcolor-grey>.cmt-bg-layer>.cmt-col-wrapper-bg-layer-inner, .cmt-btn-style-fill.cmt-btn-color-grey, .cmt-header-style-03 .header_search #search_query_top, .cmt-header-style-03 .header_search .header_search_content, .cmt-icon_element-fill.cmt-icon_element-color-grey, .cmt-toggle-title-bgcolor-grey .toggle-title, .comment-body, .pagination-block .page-numbers, .testimonials.cmt-testimonial-box-view-style1 .testimonial-content, .wrap-form.contact_form span.text-input input, .wrap-form.contact_form span.text-input select, .wrap-form.contact_form span.text-input textarea {
+                     background-color: #f5faff;
+                }
+                .spacing-7 {
+                    padding: 80px 60px;
+                    margin-top: -80px;
+                }
+                .z-index-2 {
+                    z-index: 2;
+                }
+                .box-shadow {
+                    box-shadow: 0 0 9px 0 rgb(29 33 67 / 10%);
+                }
+                .cmt-bg {
+                    position: relative;
+                }
+                .mt-0, .my-0 {
+                    margin-top: 0!important;
+                }
+
+                .contact_form
+                {
+                    margin: 50px 160px 50px 160px;
+                    /* padding:0px 50px 0px 50px; */
+                    /* background-color: #fff;
+                    box-shadow: 20px 10px 20px 20px lightblue; */
+
+                    border-radius: 15px;
+                }
+                .contact_form:hover
+                {
+
+                    /* padding:0px 50px 0px 50px; */
+
+                    box-shadow: 0px 0px 15px 10px lightblue;
+
+                }
+                .float_form
+                {
+
+
+                  border-radius: 15px;
+                }
+                .portfolio
+				{
+					background:#f6f6f6;
+				}
+				.portfolio h2
+				{
+					padding:50px 0px 30px 0px;
+					color:#000;
+				}
+				.portfolio h3
+				{
+					padding:0px 0px 60px 0px;
+					color:#000;
+				}
+				.customer
+				{
+					padding-bottom:100px;
+
+				}
+                .carousel-control.right, .carousel-control.left
+				{
+					background-image: none;
+					color: #f4511e;
+				}
+				.carousel-indicators
+				{
+					top:100% !important;
+				}
+				.carousel-indicators li
+				{
+					border-color: #f4511e;
+
+				}
+				.carousel-indicators li.active
+				{
+					background-color: #f4511e;
+				}
+				input[type=text], select, textarea {
+                  width: 94%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  resize: vertical;
+                  margin-right:20px;
+                }
+
+				@media screen and (min-width: 240px) and (max-width: 940px)
+				{
+                 .contact_form
+                    {
+                     margin: 20px 20px 20px 20px;
+<!--                     padding:0px 0px 0px 0px;-->
+                    /* background-color: #fff;
+                    box-shadow: 20px 10px 20px 20px lightblue; */
+
+                    border-radius: 15px;
+                    }
+                .contact_form:hover
+                {
+                    /* padding:0px 50px 0px 50px; */
+                    box-shadow: 0px 0px 15px 10px lightblue;
+                }
+                .title-desc
+                {
+                    font-size:12px !important;
+                     text-align:center;
+                }
+                .fonttype
+                {
+                font-size:15px;
+                text-align:center;
+				}
+				.fonttypedetail
+				{
+				font-size:20px;
+				}
+				 .spacing-7 {
+                    padding: 15px 22px;
+                    margin-top: -80px;
+                }
+                  .col-25, .col-75, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                  }
+
+					  .first_div
+                {
+
+                    height:120px;
+                }
+                .bpcl-logo
+                {
+                    height:58px;
+                   display: block;
+  margin-left: auto;
+  margin-right: auto;
+                    margin-top:3px;
+                }
+            </style>
+        </head>
+    <body>
+        <div class="container-fluid first_div">
+            <div class="row">
+                <div class="col-lg-2 ">
+                    <img class="bpcl-logo" src="{{url_for('static', filename='bpcllogo.png')}}">
+                </div>
+                <div class="col-lg-10 ">
+                    <marquee direction="left" onmousedown="stop();" onmouseup="start();" > <h3 style="color:white;"> WELCOME TO BHARAT PETROLEUM SALE PROMOTION</h3></marquee>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-fluid background_image ">
+            	<div class="contact_form">
+			<div class="cmt-col-bgcolor-yes cmt-bg cmt-bgcolor-grey z-index-2 spacing-7 mt-0 box-shadow float_form">
+
+								<div class="cmt-col-wrapper-bg-layer cmt-bg-layer"></div>
+
+								<div class="row">
+									<div class="col-lg-6 ">
+										<div class="pr-30 res-991-pr-0 res-991-mb-30 ">
+											<!-- section title -->
+											<div class="section-title with-desc clearfix ">
+												<div class="title-header ">
+													<h4 class="text-center "><strong>Bharat Petroleum Ltd.</strong></h4>
+                                                    <img src="{{url_for('static', filename='bpcllogo.png')}}" style="width:100px; " class="center-block">
+													<h1 class="title fonttype"><strong>Power your life with us!</strong></h1>
+												</div>
+												<div class="title-desc" style="font-size:22px;">
+													<b>Bharat Petroleum is among the leading oil and gas companies in India. The organisation aims to provide only the purest oil in India.</b>
+												</div>
+											</div>
+										</div>
+                                    </div>
+									<div class="form-holder">
+									<div class="col-lg-5">
+                                        <h1 style="color:#1277bb;" class="fonttypedetail">Fill Detail Here</h1><br>
+                                        <form class="form-horizontal" action="/save" method="POST" id="myform" enctype="multipart/form-data">
+                                             <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>Name<strong style="color:red">*</strong></p>
+                                                    <input type="text" class="form-control"  id="name"  name="name" placeholder="Your Name" onkeypress="return keys(event)" >
+                                                    <span id="username_detail"></span><br>
+
+                                                    <p>Mobile NO<strong style="color:red">*</strong></p>
+                                                      <div class="col-75">
+                                                    <input type="text" class="form-control"  id="mobile"  name="mobile" placeholder="Mobile Number" onkeypress="return digits(event)" >
+                                                    </div>
+                                                          <span id="mobile_detail"></span>
+
+                                                        <br>
+                                                    <p>Vehicle Number<strong style="color:red">*</strong></p>
+                                                    <input type="text" class="form-control"  id="vehicle"  name="vehicle" onkeypress="return digit(event)"   placeholder="Vehicle number" >
+                                                    <span id="vehicle_detail"></span>
+                                                    <br>
+                                                       <p>Transaction Id Number<strong style="color:red">*</strong></p>
+                                                    <input type="text" class="form-control"  id="image"  name="image" placeholder="Transaction Number" >
+                                                    <br>
+                                                    <hr>
+                                                    <br>
+                                                    <button type="submit"  name="submit" id="submit" class="btn btn-danger">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+							 </div>
+								</div>
+							</div>
+					</div>
+			</div>
+            </div>
+
+
+        <div class="container-fluid text-center portfolio">
+            <br>
+            <br>
+            <h3>Bharat Petroleum Ltd.</h3>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="{{url_for('static', filename='bp.jpg')}}"  style="height:300px">
+                            <h4><strong>Sai hi Tech Fuels</strong></h4>
+                            <p>Ludhiana</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="{{url_for('static', filename='bp1.jpg')}}" style="height:300px" >
+                            <h4>Link Road Service Station</h4>
+                            <p>Ludhiana</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="{{url_for('static', filename='bp2.jpg')}}"  style="height:300px">
+                            <h4>Royal Fuels</h4>
+                            <p>Ludhiana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row customer">
+                    <h2>OUR PARTNERS</h2>
+                    <div class="carousel slide text-center" data-ride="carousel" id="mycarousel">
+                        <div class="carousel-indicators">
+                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                            <li data-target="#mycarousel" data-slide-to="3"></li>
+                        </div>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="{{url_for('static', filename='1.png')}}" class="center-block" style="height:150px">
+                            </div>
+                            <div class="item">
+                            <img src="{{url_for('static', filename='3.png')}}" class="center-block" style="height:150px">
+                            </div>
+                            <div class="item">
+                                <img src="{{url_for('static', filename='images.png')}}" class="center-block" style="height:150px">
+
+                            </div>
+                            <div class="item">
+                                <img src="{{url_for('static', filename='4.png')}}" class="center-block" style="height:150px">
+
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" ></span>
+                             <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </body>
+    </html>
